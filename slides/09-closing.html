@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Contact & Booking — P2 Boutique Hotel</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="slide-base.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+  .slide.closing {
+    background: var(--p2-green-900);
+    padding: 0;
+    color: var(--p2-cream);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .left {
+    padding: 156px 96px 96px 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+  }
+  .left .eyebrow { margin-bottom: 16px; }
+  .left .h {
+    font-family: var(--font-serif-sc);
+    font-weight: 500;
+    font-size: 104px;
+    line-height: 1.05;
+    color: var(--p2-cream);
+    margin: 0;
+  }
+  .left .h b { color: var(--p2-gold-500); font-weight: 500; }
+  .left .quote {
+    font-family: var(--font-serif-display);
+    font-style: italic;
+    font-size: 30px;
+    color: var(--p2-gold-300);
+    line-height: 1.4;
+    max-width: 640px;
+    margin-top: 12px;
+  }
+  .left .lead {
+    font-family: var(--font-sans-sc);
+    font-size: 22px;
+    color: rgba(250,246,236,0.85);
+    line-height: 1.55;
+    max-width: 640px;
+    margin-top: 18px;
+  }
+
+  .right {
+    padding: 156px 120px 96px 0;
+    display: flex;
+    align-items: center;
+  }
+  .card {
+    background: var(--p2-cream);
+    color: var(--p2-green-900);
+    border-radius: 24px;
+    padding: 56px 48px;
+    width: 100%;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.32);
+    position: relative;
+  }
+  .card .stamp {
+    position: absolute;
+    top: -22px; left: 48px;
+    background: var(--p2-copper-500);
+    color: var(--p2-cream);
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-family: var(--font-sans-latin);
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .card h3 {
+    font-family: var(--font-serif-sc);
+    font-weight: 500;
+    font-size: 38px;
+    margin: 0 0 32px;
+    color: var(--p2-green-900);
+  }
+  .contact-row {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 22px 0;
+    border-top: 1px solid var(--border-1);
+  }
+  .contact-row:last-of-type { border-bottom: 1px solid var(--border-1); }
+  .contact-row .ic {
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    background: var(--p2-green-100);
+    color: var(--p2-green-500);
+    display: grid; place-items: center;
+  }
+  .contact-row .k {
+    font-family: var(--font-sans-latin);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--p2-sage-gray);
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .contact-row .v {
+    font-family: var(--font-sans-sc);
+    font-size: 20px;
+    color: var(--p2-green-900);
+    font-weight: 500;
+    line-height: 1.5;
+  }
+  .card .booking-cta {
+    margin-top: 28px;
+    background: var(--p2-green-900);
+    color: var(--p2-cream);
+    padding: 18px 28px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--font-sans-sc);
+    font-size: 22px;
+    font-weight: 500;
+  }
+  .booking-cta .pr {
+    font-family: var(--font-serif-display);
+    font-weight: 600;
+    color: var(--p2-gold-500);
+    font-size: 32px;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+<div class="slide-stage">
+  <div class="slide-scale" id="scale">
+    <section class="slide closing" data-screen-label="09 Contact & Booking">
+      <div class="corner-mark on-dark">
+        <span class="p">P</span><span class="two">2</span>
+        <span class="wm">Boutique Hotel</span>
+      </div>
+      <div class="left">
+        <div class="eyebrow on-dark">Thank You</div>
+        <h1 class="h">期待您的<br><b>光临</b></h1>
+        <div class="quote">在曼谷的中心，<br>找到属于您的温馨之家。</div>
+        <p class="lead">P2 Boutique Hotel · 曼谷水门精品酒店<br>购物天堂 · 交通便利 · 温馨舒适</p>
+      </div>
+      <div class="right">
+        <div class="card">
+          <div class="stamp">Contact</div>
+          <h3>联系我们</h3>
+          <div class="contact-row">
+            <div class="ic"><i data-lucide="map-pin" style="width:22px;height:22px;stroke-width:1.5"></i></div>
+            <div>
+              <div class="k">Address · 酒店地址</div>
+              <div class="v">1091/213-216 Soi Petchaburi 33,<br>Makkasan · Ratchathewi · Bangkok 10400</div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="ic"><i data-lucide="facebook" style="width:22px;height:22px;stroke-width:1.5"></i></div>
+            <div>
+              <div class="k">Facebook · 主页</div>
+              <div class="v">P2 Hotel Pratunam</div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="ic"><i data-lucide="bell" style="width:22px;height:22px;stroke-width:1.5"></i></div>
+            <div>
+              <div class="k">Reception · 24h 前台</div>
+              <div class="v" style="color:var(--p2-sage-gray);font-size:15px">前台电话请向工作人员索取</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer on-dark">P2 Boutique Hotel · 曼谷水门精品酒店</div>
+      <div class="page-number on-dark">09 / 09</div>
+    </section>
+  </div>
+</div>
+<script>
+  function fit(){
+    const s = document.getElementById('scale');
+    const k = Math.min(window.innerWidth/1920, window.innerHeight/1080);
+    const x = (window.innerWidth - 1920*k)/2;
+    const y = (window.innerHeight - 1080*k)/2;
+    s.style.transform = `translate(${x}px, ${y}px) scale(${k})`;
+  }
+  fit(); addEventListener('resize', fit);
+  lucide.createIcons();
+</script>
+</body>
+</html>

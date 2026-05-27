@@ -1,0 +1,256 @@
+/* ===================================================================
+   P2 Boutique Hotel — Design Tokens
+   Source: existing PPTX deck (Noto Sans/Serif CJK SC) + brand logo
+   Use: import into any page; reference vars instead of hardcoding.
+   =================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Noto+Serif+SC:wght@400;500;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+:root {
+  /* -----------------------------------------------------------------
+     COLORS — core palette
+     ----------------------------------------------------------------- */
+
+  /* Primary — deep emerald (from logo "P") */
+  --p2-green-900: #0F3D38;   /* primary brand green */
+  --p2-green-800: #17524C;   /* hover / pressed */
+  --p2-green-700: #1E332F;   /* darkest, body text on cream */
+  --p2-green-500: #0E8C7F;   /* teal accent (signage cyan vibe) */
+  --p2-green-300: #8FB7B0;   /* muted sage */
+  --p2-green-200: #D5E3E0;   /* sage tint */
+  --p2-green-100: #EAF3F1;   /* mint tint */
+  --p2-green-50:  #F4F5F0;   /* page bg, off-white-green */
+
+  /* Gold — signature accent (from logo "HOTEL Pratunam" + storefront sign warmth) */
+  --p2-gold-700:   #8A6E1E;  /* deep — emphasis */
+  --p2-gold-600:   #A88B3A;
+  --p2-gold-500:   #C8A95A;  /* main gold — accent & price */
+  --p2-gold-300:   #E2CB8E;
+  --p2-gold-100:   #F3E9CC;
+
+  /* Legacy aliases — copper tokens redirect to gold so existing slides still render.
+     New work should reference --p2-gold-* directly. */
+  --p2-copper-600: var(--p2-gold-700);
+  --p2-copper-500: var(--p2-gold-500);
+  --p2-copper-300: var(--p2-gold-300);
+  --p2-copper-100: var(--p2-gold-100);
+
+  /* Neutrals */
+  --p2-cream:      #FAF6EC;  /* logo background cream */
+  --p2-ivory:      #F4F5F0;
+  --p2-bone:       #ECE7DA;
+  --p2-sage-gray:  #6C7D79;  /* muted body */
+  --p2-charcoal:   #1E332F;
+  --p2-ink:        #0A1F1C;  /* near-black */
+  --p2-white:      #FFFFFF;
+
+  /* Mascot pink (bear's bow) — used very sparingly */
+  --p2-pink-accent: #E84A7F;
+
+  /* Semantic color roles */
+  --fg-1:        var(--p2-green-700);   /* primary body text */
+  --fg-2:        var(--p2-sage-gray);   /* secondary text */
+  --fg-3:        #95A3A0;               /* tertiary / captions */
+  --fg-inverse:  var(--p2-cream);
+  --fg-brand:    var(--p2-green-900);
+  --fg-accent:   var(--p2-gold-500);
+  --fg-gold:     var(--p2-gold-500);
+
+  --bg-1:        var(--p2-ivory);       /* page background */
+  --bg-2:        var(--p2-cream);       /* card / panel */
+  --bg-3:        var(--p2-green-100);   /* tinted panel */
+  --bg-deep:     var(--p2-green-900);   /* dark hero/footer */
+  --bg-accent:   var(--p2-gold-500);
+
+  --border-1:    rgba(15, 61, 56, 0.12);
+  --border-2:    rgba(15, 61, 56, 0.22);
+  --divider:     rgba(15, 61, 56, 0.08);
+
+  /* -----------------------------------------------------------------
+     TYPOGRAPHY — fonts
+     ----------------------------------------------------------------- */
+
+  /* For 简体中文 body & UI */
+  --font-sans-sc:  "Noto Sans SC", "PingFang SC", "Microsoft YaHei",
+                   -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* For 简体中文 display / headlines (warmer, more editorial) */
+  --font-serif-sc: "Noto Serif SC", "Source Han Serif SC", "Songti SC",
+                   "STSong", serif;
+
+  /* For Latin display headings (echoes the "P2" logo serif) */
+  --font-serif-display: "Cormorant Garamond", "Noto Serif SC", serif;
+
+  /* Latin-only UI (e.g., room category labels) */
+  --font-sans-latin: "Noto Sans SC", -apple-system, BlinkMacSystemFont,
+                     "Segoe UI", sans-serif;
+
+  /* -----------------------------------------------------------------
+     TYPE SCALE — slide presentation (1920×1080)
+     ----------------------------------------------------------------- */
+  --t-hero:     96px;   /* slide cover Chinese headline */
+  --t-h1:       64px;   /* big title */
+  --t-h2:       48px;   /* section title */
+  --t-h3:       36px;   /* subsection / card title */
+  --t-h4:       28px;   /* card heading */
+  --t-lead:     24px;   /* lead paragraph */
+  --t-body:     20px;   /* body */
+  --t-small:    16px;   /* small label */
+  --t-eyebrow:  14px;   /* uppercase Latin eyebrow */
+
+  --lh-tight:   1.15;
+  --lh-snug:    1.3;
+  --lh-normal:  1.55;
+  --lh-loose:   1.8;
+
+  --ls-tight:   -0.01em;
+  --ls-normal:  0;
+  --ls-wide:    0.08em;  /* eyebrow */
+  --ls-widest:  0.22em;  /* logo-tier all-caps */
+
+  /* -----------------------------------------------------------------
+     SPACING — 4px base
+     ----------------------------------------------------------------- */
+  --s-1:   4px;
+  --s-2:   8px;
+  --s-3:   12px;
+  --s-4:   16px;
+  --s-5:   20px;
+  --s-6:   24px;
+  --s-8:   32px;
+  --s-10:  40px;
+  --s-12:  48px;
+  --s-16:  64px;
+  --s-20:  80px;
+  --s-24:  96px;
+  --s-32:  128px;
+
+  /* -----------------------------------------------------------------
+     RADII — soft, not overly rounded
+     ----------------------------------------------------------------- */
+  --r-xs:  4px;
+  --r-sm:  6px;
+  --r-md:  10px;
+  --r-lg:  16px;
+  --r-xl:  24px;
+  --r-pill: 999px;
+
+  /* -----------------------------------------------------------------
+     SHADOWS — warm, subtle (hotel = restraint, not flash)
+     ----------------------------------------------------------------- */
+  --shadow-xs: 0 1px 2px rgba(15, 61, 56, 0.06);
+  --shadow-sm: 0 2px 6px rgba(15, 61, 56, 0.08);
+  --shadow-md: 0 6px 18px rgba(15, 61, 56, 0.10);
+  --shadow-lg: 0 16px 40px rgba(15, 61, 56, 0.14);
+  --shadow-image: 0 24px 60px rgba(15, 61, 56, 0.22);
+
+  /* Inner shadow used on tinted cards */
+  --shadow-inset: inset 0 0 0 1px rgba(15, 61, 56, 0.06);
+
+  /* -----------------------------------------------------------------
+     EASING / DURATIONS — gentle, never bouncy
+     ----------------------------------------------------------------- */
+  --ease-out:   cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-inout: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast:   140ms;
+  --dur-med:    240ms;
+  --dur-slow:   480ms;
+}
+
+/* ===================================================================
+   SEMANTIC ELEMENT STYLES
+   Apply to a container with class="p2" or directly to body.
+   =================================================================== */
+
+.p2, body.p2 {
+  font-family: var(--font-sans-sc);
+  color: var(--fg-1);
+  background: var(--bg-1);
+  font-size: var(--t-body);
+  line-height: var(--lh-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.p2 h1, .p2 .h1 {
+  font-family: var(--font-serif-sc);
+  font-size: var(--t-h1);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  color: var(--fg-brand);
+  font-weight: 500;
+  margin: 0 0 var(--s-4) 0;
+}
+
+.p2 h2, .p2 .h2 {
+  font-family: var(--font-serif-sc);
+  font-size: var(--t-h2);
+  line-height: var(--lh-tight);
+  color: var(--fg-brand);
+  font-weight: 500;
+  margin: 0 0 var(--s-3) 0;
+}
+
+.p2 h3, .p2 .h3 {
+  font-family: var(--font-sans-sc);
+  font-size: var(--t-h3);
+  line-height: var(--lh-snug);
+  color: var(--fg-1);
+  font-weight: 700;
+  margin: 0 0 var(--s-2) 0;
+}
+
+.p2 h4, .p2 .h4 {
+  font-family: var(--font-sans-sc);
+  font-size: var(--t-h4);
+  line-height: var(--lh-snug);
+  color: var(--fg-1);
+  font-weight: 500;
+  margin: 0 0 var(--s-2) 0;
+}
+
+.p2 p, .p2 .body {
+  font-size: var(--t-body);
+  line-height: var(--lh-normal);
+  color: var(--fg-1);
+  margin: 0 0 var(--s-4) 0;
+}
+
+.p2 .lead {
+  font-size: var(--t-lead);
+  line-height: var(--lh-normal);
+  color: var(--fg-1);
+}
+
+.p2 .eyebrow {
+  font-family: var(--font-sans-latin);
+  font-size: var(--t-eyebrow);
+  font-weight: 600;
+  letter-spacing: var(--ls-widest);
+  text-transform: uppercase;
+  color: var(--fg-accent);
+}
+
+.p2 .display-serif {
+  font-family: var(--font-serif-display);
+  font-weight: 500;
+  font-style: italic;
+  color: var(--fg-gold);
+}
+
+.p2 .price {
+  font-family: var(--font-serif-display);
+  font-weight: 600;
+  font-size: 96px;
+  line-height: 1;
+  color: var(--fg-accent);
+  letter-spacing: var(--ls-tight);
+}
+
+.p2 .price-unit {
+  font-family: var(--font-sans-sc);
+  font-size: var(--t-small);
+  color: var(--fg-2);
+  letter-spacing: var(--ls-normal);
+}

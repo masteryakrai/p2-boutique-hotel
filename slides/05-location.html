@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Location — P2 Boutique Hotel</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="slide-base.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+  .slide.location {
+    background: var(--p2-ivory);
+    padding: 156px 120px 120px;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 88px;
+  }
+  .map-col { position: relative; }
+  .map-card {
+    border-radius: 20px;
+    overflow: hidden;
+    height: 660px;
+    background: var(--p2-green-100);
+    position: relative;
+    box-shadow: 0 24px 60px rgba(15, 61, 56, 0.18);
+    display: flex;
+    align-items: stretch;
+  }
+  .map-card .photo {
+    flex: 1;
+    background-image: url('../assets/photos/entrance-01.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  .map-card .photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(15,61,56,0.0) 50%, rgba(15,61,56,0.78));
+  }
+  .map-card .stamp {
+    position: absolute;
+    bottom: 32px;
+    left: 32px;
+    right: 32px;
+    color: var(--p2-cream);
+    z-index: 2;
+  }
+  .map-card .stamp .pin {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--p2-copper-500);
+    color: var(--p2-cream);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-family: var(--font-sans-latin);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  .map-card .stamp .hzh {
+    font-family: var(--font-serif-sc);
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  .map-card .stamp .addr {
+    font-family: var(--font-sans-sc);
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgba(250, 246, 236, 0.88);
+  }
+
+  .list-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .list-col .eyebrow { margin-bottom: 24px; }
+  .list-col .h-section { margin: 0 0 16px 0; font-size: 72px; }
+  .list-col .sub {
+    font-family: var(--font-sans-sc);
+    font-size: 22px;
+    color: var(--p2-sage-gray);
+    margin-bottom: 36px;
+  }
+
+  .place-list {
+    border-top: 1px solid var(--border-2);
+  }
+  .place {
+    display: grid;
+    grid-template-columns: 60px 1fr auto;
+    align-items: center;
+    gap: 24px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--border-1);
+  }
+  .place .ic {
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    background: var(--p2-green-100);
+    color: var(--p2-green-500);
+    display: grid; place-items: center;
+  }
+  .place .info .zh {
+    font-family: var(--font-sans-sc);
+    font-size: 22px;
+    color: var(--p2-green-900);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .place .info .en {
+    font-family: var(--font-sans-latin);
+    font-size: 13px;
+    color: var(--p2-sage-gray);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .place .dist {
+    text-align: right;
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+  }
+  .place .dist .num {
+    font-family: var(--font-serif-display);
+    font-style: italic;
+    font-size: 36px;
+    color: var(--p2-copper-500);
+    font-weight: 500;
+    line-height: 1;
+  }
+  .place .dist .min {
+    font-family: var(--font-sans-sc);
+    font-size: 14px;
+    color: var(--p2-sage-gray);
+  }
+</style>
+</head>
+<body>
+<div class="slide-stage">
+  <div class="slide-scale" id="scale">
+    <section class="slide location" data-screen-label="05 Location">
+      <div class="corner-mark">
+        <span class="p">P</span><span class="two">2</span>
+        <span class="wm">Boutique Hotel</span>
+      </div>
+      <div class="map-col">
+        <div class="map-card">
+          <div class="photo"></div>
+          <div class="stamp">
+            <div class="pin"><i data-lucide="map-pin" style="width:14px;height:14px;stroke-width:2"></i> 酒店位置</div>
+            <div class="hzh">水门商圈 · 黄金地段</div>
+            <div class="addr">1091/213-216 Soi Petchaburi 33,<br>Makkasan · Ratchathewi · Bangkok 10400</div>
+          </div>
+        </div>
+      </div>
+      <div class="list-col">
+        <div class="eyebrow">Prime Location</div>
+        <h2 class="h-section">黄金地段 ·<br>尽享购物天堂</h2>
+        <div class="sub">酒店步行可达 5 大地标 · 让购物与观光都触手可及</div>
+
+        <div class="place-list">
+          <div class="place">
+            <div class="ic"><i data-lucide="shopping-bag" style="width:24px;height:24px;stroke-width:1.5"></i></div>
+            <div class="info"><div class="zh">水门市场</div><div class="en">Pratunam Market</div></div>
+            <div class="dist"><span class="num">12</span><span class="min">分钟步行</span></div>
+          </div>
+          <div class="place">
+            <div class="ic"><i data-lucide="store" style="width:24px;height:24px;stroke-width:1.5"></i></div>
+            <div class="info"><div class="zh">白金时尚购物中心</div><div class="en">Platinum Fashion Mall</div></div>
+            <div class="dist"><span class="num">12</span><span class="min">分钟步行</span></div>
+          </div>
+          <div class="place">
+            <div class="ic"><i data-lucide="building-2" style="width:24px;height:24px;stroke-width:1.5"></i></div>
+            <div class="info"><div class="zh">中央世界购物中心</div><div class="en">CentralWorld</div></div>
+            <div class="dist"><span class="num">15</span><span class="min">分钟步行</span></div>
+          </div>
+          <div class="place">
+            <div class="ic"><i data-lucide="sparkles" style="width:24px;height:24px;stroke-width:1.5"></i></div>
+            <div class="info"><div class="zh">四面佛</div><div class="en">Erawan Shrine</div></div>
+            <div class="dist"><span class="num">15</span><span class="min">分钟步行</span></div>
+          </div>
+          <div class="place">
+            <div class="ic"><i data-lucide="gem" style="width:24px;height:24px;stroke-width:1.5"></i></div>
+            <div class="info"><div class="zh">中央大使馆百货</div><div class="en">Central Embassy</div></div>
+            <div class="dist"><span class="num">13</span><span class="min">分钟步行</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer">P2 Boutique Hotel · Pratunam</div>
+      <div class="page-number">05 / 09</div>
+    </section>
+  </div>
+</div>
+<script>
+  function fit(){
+    const s = document.getElementById('scale');
+    const k = Math.min(window.innerWidth/1920, window.innerHeight/1080);
+    const x = (window.innerWidth - 1920*k)/2;
+    const y = (window.innerHeight - 1080*k)/2;
+    s.style.transform = `translate(${x}px, ${y}px) scale(${k})`;
+  }
+  fit(); addEventListener('resize', fit);
+  lucide.createIcons();
+</script>
+</body>
+</html>

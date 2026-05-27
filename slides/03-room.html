@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Rooms — P2 Boutique Hotel</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="slide-base.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+  .slide.room {
+    background: var(--p2-ivory);
+    padding: 168px 120px 120px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 96px;
+    align-items: center;
+  }
+  .room-img {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 24px 60px rgba(15, 61, 56, 0.22);
+    aspect-ratio: 4/3;
+  }
+  .room-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .room-info { padding-right: 40px; }
+  .room-info .eyebrow { margin-bottom: 24px; }
+  .room-info .h-section { margin: 0 0 12px 0; font-size: 88px; }
+  .room-info .en-name {
+    font-family: var(--font-sans-latin);
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--p2-sage-gray);
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 36px;
+  }
+  .price-block {
+    border-top: 2px solid var(--p2-copper-500);
+    border-bottom: 1px solid var(--border-1);
+    padding: 28px 0 32px;
+    margin-bottom: 36px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  .price-block .price {
+    font-family: var(--font-serif-display);
+    font-weight: 600;
+    font-size: 140px;
+    color: var(--p2-copper-500);
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+  }
+  .price-block .price-unit {
+    font-family: var(--font-sans-sc);
+    font-size: 22px;
+    color: var(--p2-sage-gray);
+    text-align: right;
+  }
+  .price-block .price-unit b {
+    display: block;
+    color: var(--p2-green-900);
+    font-weight: 700;
+    font-size: 26px;
+    margin-bottom: 6px;
+  }
+
+  .summary {
+    display: flex;
+    gap: 36px;
+    margin-bottom: 28px;
+    font-family: var(--font-sans-sc);
+  }
+  .summary .item .k {
+    color: var(--p2-sage-gray);
+    font-size: 14px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .summary .item .v {
+    color: var(--p2-green-900);
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  .desc { font-family: var(--font-sans-sc); font-size: 20px; line-height: 1.65; color: var(--p2-green-700); margin-bottom: 36px; }
+
+  .amenities {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+  }
+  .am {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+  .am .chip {
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    background: var(--p2-green-100);
+    display: grid; place-items: center;
+    color: var(--p2-green-500);
+  }
+  .am .ttl { font-size: 14px; color: var(--p2-green-700); font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="slide-stage">
+  <div class="slide-scale" id="scale">
+    <section class="slide room" data-screen-label="03 Room — Superior" style="padding: 68px 120px 30px">
+      <div class="corner-mark">
+        <span class="p">P</span><span class="two">2</span>
+        <span class="wm">Boutique Hotel</span>
+      </div>
+      <div class="room-img"><img src="../assets/photos/superior-03.jpg" alt="" style="padding: 0px"></div>
+      <div class="room-info" style="padding: 0px 300px 0px 0px">
+        <div class="eyebrow">Our Rooms</div>
+        <h2 class="h-section">高级房</h2>
+        <div class="en-name">Superior Room</div>
+
+        <div class="price-block">
+          <div class="price">990</div>
+          <div class="price-unit"><b>泰铢 ／ 每晚起</b>含早餐 · 含税</div>
+        </div>
+
+        <div class="summary">
+          <div class="item"><div class="k">床型</div><div class="v">双床 / 大床</div></div>
+          <div class="item"><div class="k">入住</div><div class="v">2 位</div></div>
+          <div class="item"><div class="k">面积</div><div class="v">22 m²</div></div>
+        </div>
+
+        <p class="desc">简约舒适的客房，配备齐全设施，明亮整洁，是注重性价比旅客的理想之选。</p>
+
+        <div class="amenities">
+          <div class="am"><div class="chip"><i data-lucide="snowflake" style="width:30px;height:30px;stroke-width:1.5"></i></div><div class="ttl">空调</div></div>
+          <div class="am"><div class="chip"><i data-lucide="monitor" style="width:30px;height:30px;stroke-width:1.5"></i></div><div class="ttl">平板电视</div></div>
+          <div class="am"><div class="chip"><i data-lucide="wifi" style="width:30px;height:30px;stroke-width:1.5"></i></div><div class="ttl">免费 WiFi</div></div>
+          <div class="am"><div class="chip"><i data-lucide="refrigerator" style="width:30px;height:30px;stroke-width:1.5"></i></div><div class="ttl">迷你冰箱</div></div>
+          <div class="am"><div class="chip"><i data-lucide="bath" style="width:30px;height:30px;stroke-width:1.5"></i></div><div class="ttl">独立卫浴</div></div>
+          <div class="am"><div class="chip"><i data-lucide="coffee" style="width:30px;height:30px;stroke-width:1.5"></i></div><div class="ttl">茶／咖啡</div></div>
+        </div>
+      </div>
+      <div class="slide-footer" style="padding: 0px 0px 70px">P2 Boutique Hotel · Pratunam</div>
+      <div class="page-number">03 / 09</div>
+    </section>
+  </div>
+</div>
+<script>
+  function fit(){
+    const s = document.getElementById('scale');
+    const k = Math.min(window.innerWidth/1920, window.innerHeight/1080);
+    const x = (window.innerWidth - 1920*k)/2;
+    const y = (window.innerHeight - 1080*k)/2;
+    s.style.transform = `translate(${x}px, ${y}px) scale(${k})`;
+  }
+  fit(); addEventListener('resize', fit);
+  lucide.createIcons();
+</script>
+</body>
+</html>

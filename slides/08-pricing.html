@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Pricing — P2 Boutique Hotel</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .slide.pricing {
+    background: var(--p2-ivory);
+    padding: 140px 144px 100px;
+  }
+  .head { margin-bottom: 48px; max-width: none; }
+  .head .eyebrow { margin-bottom: 22px; }
+  .head .h-section { margin: 0; font-size: 80px; }
+  .head .sub {
+    font-family: var(--font-sans-sc);
+    font-size: 22px;
+    color: var(--p2-sage-gray);
+    margin-top: 20px;
+    max-width: 1100px;
+  }
+
+  /* 2×2 grid — fills the slide width */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 1300px;
+  }
+
+  .card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 30px 34px;
+    box-shadow: 0 4px 14px rgba(15, 61, 56, 0.06);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    column-gap: 28px;
+    position: relative;
+  }
+  .card .left .en {
+    font-family: var(--font-sans-latin);
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--p2-gold-500);
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  .card .left h3 {
+    font-family: var(--font-serif-sc);
+    font-weight: 500;
+    font-size: 34px;
+    color: var(--p2-green-900);
+    margin: 0 0 6px 0;
+    line-height: 1.1;
+  }
+  .card .left .occ {
+    font-family: var(--font-sans-sc);
+    color: var(--p2-sage-gray);
+    font-size: 15px;
+  }
+  .card .left .occ b {
+    color: var(--p2-green-700);
+    font-weight: 600;
+  }
+  .card .price-col {
+    text-align: right;
+    border-left: 1px solid var(--border-1);
+    padding-left: 26px;
+    min-width: 188px;
+  }
+  .card .pr {
+    font-family: var(--font-serif-display);
+    font-weight: 600;
+    font-size: 58px;
+    color: var(--p2-gold-700);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    display: block;
+  }
+  .card .pu {
+    font-family: var(--font-sans-sc);
+    font-size: 13px;
+    color: var(--p2-sage-gray);
+    margin-top: 7px;
+    display: block;
+  }
+
+  .footnote {
+    margin-top: 32px;
+    font-family: var(--font-sans-sc);
+    font-size: 16px;
+    color: var(--p2-sage-gray);
+    line-height: 1.6;
+  }
+  .footnote b { color: var(--p2-green-700); font-weight: 600; }
+
+  .card.featured {
+    background: var(--p2-green-900);
+    color: var(--p2-cream);
+  }
+  .card.featured .left .en { color: var(--p2-gold-500); }
+  .card.featured .left h3 { color: var(--p2-cream); }
+  .card.featured .left .occ { color: rgba(250,246,236,0.7); }
+  .card.featured .left .occ b { color: var(--p2-cream); }
+  .card.featured .pr { color: var(--p2-gold-500); }
+  .card.featured .pu { color: rgba(250,246,236,0.7); }
+  .card.featured .price-col { border-left-color: rgba(232,203,142,0.3); }
+  .card.featured .badge {
+    position: absolute; top: -10px; left: 28px;
+    background: var(--p2-gold-500);
+    color: var(--p2-green-900);
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-family: var(--font-sans-latin);
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+</style>
+</head>
+<body>
+<div class="slide-stage">
+  <div class="slide-scale" id="scale">
+    <section class="slide pricing" data-screen-label="08 Pricing">
+      <div class="corner-mark">
+        <span class="p">P</span><span class="two">2</span>
+        <span class="wm">Boutique Hotel</span>
+      </div>
+      <div class="head">
+        <div class="eyebrow">Our Rooms · Pricing</div>
+        <h2 class="h-section">四种房型 · 一份温馨</h2>
+        <div class="sub">所有房型均含早餐、24 小时前台与免费 WiFi · 价格为每晚起价，未含旺季加价</div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <div class="left">
+            <div class="en">Superior Room</div>
+            <h3>高级房</h3>
+            <div class="occ"><b>双床／大床</b> · 适合 2 位入住</div>
+          </div>
+          <div class="price-col">
+            <span class="pr">990</span>
+            <span class="pu">泰铢 ／ 每晚起</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="left">
+            <div class="en">Deluxe Room</div>
+            <h3>豪华房</h3>
+            <div class="occ"><b>舒适大床</b> · 适合 2 位入住</div>
+          </div>
+          <div class="price-col">
+            <span class="pr">1,100</span>
+            <span class="pu">泰铢 ／ 每晚起</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="left">
+            <div class="en">Triple Room</div>
+            <h3>三人房</h3>
+            <div class="occ"><b>多张床位</b> · 适合 3 位入住</div>
+          </div>
+          <div class="price-col">
+            <span class="pr">1,550</span>
+            <span class="pu">泰铢 ／ 每晚起</span>
+          </div>
+        </div>
+        <div class="card featured">
+          <span class="badge">Family Pick</span>
+          <div class="left">
+            <div class="en">Family Room</div>
+            <h3>家庭房</h3>
+            <div class="occ"><b>多张床位</b> · 适合 4 位入住</div>
+          </div>
+          <div class="price-col">
+            <span class="pr">1,700</span>
+            <span class="pu">泰铢 ／ 每晚起</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footnote"><b>温馨提示</b>　价格仅供参考，具体以预订渠道为准 · 节假日及特殊时段可能浮动</div>
+
+      <div class="slide-footer">P2 Boutique Hotel · Pratunam</div>
+      <div class="page-number">08 / 09</div>
+    </section>
+  </div>
+</div>
+<script>
+  function fit(){
+    const s = document.getElementById('scale');
+    const k = Math.min(window.innerWidth/1920, window.innerHeight/1080);
+    const x = (window.innerWidth - 1920*k)/2;
+    const y = (window.innerHeight - 1080*k)/2;
+    s.style.transform = `translate(${x}px, ${y}px) scale(${k})`;
+  }
+  fit(); addEventListener('resize', fit);
+</script>
+</body>
+</html>

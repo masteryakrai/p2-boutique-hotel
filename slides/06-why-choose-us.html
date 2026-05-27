@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Why Choose Us — P2 Boutique Hotel</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="slide-base.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+  .slide.why {
+    background: var(--p2-ivory);
+    padding: 140px 140px 96px;
+  }
+  .head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 64px;
+    margin-bottom: 48px;
+  }
+  .head .left .eyebrow { margin-bottom: 18px; }
+  .head .h-section {
+    font-size: 76px;
+    margin: 0;
+    line-height: 1.1;
+  }
+  .head .closer {
+    font-family: var(--font-serif-display);
+    font-style: italic;
+    color: var(--p2-gold-500);
+    font-size: 28px;
+    text-align: right;
+    line-height: 1.45;
+    max-width: 480px;
+    margin-right: 200px;
+  }
+
+  .reasons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 24px;
+    max-width: 1380px;
+  }
+
+  .reason {
+    background: #fff;
+    border-radius: 12px;
+    padding: 26px 28px 24px;
+    box-shadow: 0 4px 14px rgba(15, 61, 56, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    min-height: 170px;
+  }
+  .reason::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 48px; height: 3px;
+    background: var(--p2-gold-500);
+    border-radius: 0 0 3px 0;
+  }
+  .reason .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .reason .ic {
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    background: var(--p2-green-100);
+    color: var(--p2-green-500);
+    display: grid; place-items: center;
+    flex-shrink: 0;
+  }
+  .reason .num {
+    font-family: var(--font-serif-display);
+    font-style: italic;
+    color: var(--p2-gold-700);
+    font-size: 38px;
+    line-height: 1;
+    font-weight: 600;
+  }
+  .reason h4 {
+    font-family: var(--font-sans-sc);
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--p2-green-900);
+    margin: 0;
+    line-height: 1.2;
+  }
+  .reason .desc {
+    font-family: var(--font-sans-sc);
+    font-size: 15px;
+    color: var(--p2-green-700);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  .closing-band {
+    margin-top: 28px;
+    padding: 22px 36px;
+    background: var(--p2-green-900);
+    border-radius: 12px;
+    color: var(--p2-cream);
+    font-family: var(--font-serif-sc);
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.02em;
+    max-width: 1380px;
+    box-sizing: border-box;
+  }
+  .closing-band b { color: var(--p2-gold-500); font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="slide-stage">
+  <div class="slide-scale" id="scale">
+    <section class="slide why" data-screen-label="06 Why Choose Us">
+      <div class="corner-mark">
+        <span class="p">P</span><span class="two">2</span>
+        <span class="wm">Boutique Hotel</span>
+      </div>
+
+      <div class="head">
+        <div class="left">
+          <div class="eyebrow">Why Choose Us</div>
+          <h2 class="h-section">为什么选择<br>P2 精品酒店</h2>
+        </div>
+        <div class="closer">六大理由 · 让您在曼谷的<br>每一天都从温馨开始</div>
+      </div>
+
+      <div class="reasons">
+        <div class="reason">
+          <div class="top">
+            <div class="ic"><i data-lucide="badge-percent" style="width:24px;height:24px;stroke-width:1.5"></i></div>
+            <span class="num">01</span>
+          </div>
+          <h4>超高性价比</h4>
+          <p class="desc">990 泰铢起即可入住曼谷市中心。</p>
+        </div>
+        <div class="reason">
+          <div class="top">
+            <div class="ic"><i data-lucide="shopping-bag" style="width:28px;height:28px;stroke-width:1.5"></i></div>
+            <span class="num">02</span>
+          </div>
+          <h4>购物者天堂</h4>
+          <p class="desc">步行直达水门、白金与 CentralWorld。</p>
+        </div>
+        <div class="reason">
+          <div class="top">
+            <div class="ic"><i data-lucide="train" style="width:28px;height:28px;stroke-width:1.5"></i></div>
+            <span class="num">03</span>
+          </div>
+          <h4>交通便利</h4>
+          <p class="desc">邻近机场快线、BTS 与 MRT 站点。</p>
+        </div>
+        <div class="reason">
+          <div class="top">
+            <div class="ic"><i data-lucide="bell" style="width:28px;height:28px;stroke-width:1.5"></i></div>
+            <span class="num">04</span>
+          </div>
+          <h4>24h 服务</h4>
+          <p class="desc">24 小时前台与贴心管家服务。</p>
+        </div>
+        <div class="reason">
+          <div class="top">
+            <div class="ic"><i data-lucide="sparkles" style="width:28px;height:28px;stroke-width:1.5"></i></div>
+            <span class="num">05</span>
+          </div>
+          <h4>整洁舒适</h4>
+          <p class="desc">客房干净明亮，每日清洁打理。</p>
+        </div>
+        <div class="reason">
+          <div class="top">
+            <div class="ic"><i data-lucide="smile" style="width:28px;height:28px;stroke-width:1.5"></i></div>
+            <span class="num">06</span>
+          </div>
+          <h4>萌趣体验</h4>
+          <p class="desc">可爱小熊吉祥物，旅程更添欢乐。</p>
+        </div>
+      </div>
+
+      <div class="closing-band">入住 P2 精品酒店 — 在曼谷的中心，找到属于您的<b>温馨之家</b>。</div>
+
+      <div class="slide-footer">P2 Boutique Hotel · Pratunam</div>
+      <div class="page-number">06 / 09</div>
+    </section>
+  </div>
+</div>
+<script>
+  function fit(){
+    const s = document.getElementById('scale');
+    const k = Math.min(window.innerWidth/1920, window.innerHeight/1080);
+    const x = (window.innerWidth - 1920*k)/2;
+    const y = (window.innerHeight - 1080*k)/2;
+    s.style.transform = `translate(${x}px, ${y}px) scale(${k})`;
+  }
+  fit(); addEventListener('resize', fit);
+  lucide.createIcons();
+</script>
+</body>
+</html>

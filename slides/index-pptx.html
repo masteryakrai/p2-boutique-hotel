@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>P2 Boutique Hotel · Deck (Export)</title>
+<style>
+  html, body {
+    margin: 0; padding: 0;
+    width: 1920px; height: 1080px;
+    overflow: hidden;
+    background: #fff;
+  }
+  .slide {
+    position: absolute;
+    inset: 0;
+    width: 1920px;
+    height: 1080px;
+    display: none;
+  }
+  .slide.active { display: block; }
+  .slide img {
+    width: 1920px;
+    height: 1080px;
+    object-fit: cover;
+    display: block;
+  }
+</style>
+</head>
+<body>
+  <div class="slide active" data-slide="0"><img src="print-assets/slide-01.png" alt=""></div>
+  <div class="slide" data-slide="1"><img src="print-assets/slide-02.png" alt=""></div>
+  <div class="slide" data-slide="2"><img src="print-assets/slide-03.png" alt=""></div>
+  <div class="slide" data-slide="3"><img src="print-assets/slide-04.png" alt=""></div>
+  <div class="slide" data-slide="4"><img src="print-assets/slide-05.png" alt=""></div>
+  <div class="slide" data-slide="5"><img src="print-assets/slide-06.png" alt=""></div>
+  <div class="slide" data-slide="6"><img src="print-assets/slide-07.png" alt=""></div>
+  <div class="slide" data-slide="7"><img src="print-assets/slide-08.png" alt=""></div>
+  <div class="slide" data-slide="8"><img src="print-assets/slide-09.png" alt=""></div>
+<script>
+  window.goToSlide = function(n) {
+    document.querySelectorAll('.slide').forEach((s, i) => {
+      s.classList.toggle('active', i === n);
+    });
+  };
+</script>
+</body>
+</html>

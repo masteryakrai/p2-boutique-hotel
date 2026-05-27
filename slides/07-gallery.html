@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Gallery — P2 Boutique Hotel</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .slide.gallery {
+    background: var(--p2-ink);
+    padding: 0;
+    position: relative;
+  }
+  .bg-photo {
+    position: absolute;
+    inset: 0;
+    background-image: url('../assets/photos/superior-03.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  .bg-photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(15,61,56,0.78) 0%, rgba(15,61,56,0.32) 38%, transparent 60%),
+      linear-gradient(180deg, transparent 60%, rgba(15,61,56,0.7));
+  }
+  .ovl {
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 920px;
+    padding: 156px 96px 120px;
+    color: var(--p2-cream);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .ovl .eyebrow { margin-bottom: 28px; }
+  .ovl .h {
+    font-family: var(--font-serif-sc);
+    font-weight: 500;
+    font-size: 96px;
+    line-height: 1.1;
+    margin: 0 0 32px;
+  }
+  .ovl .quote {
+    font-family: var(--font-serif-display);
+    font-style: italic;
+    font-size: 32px;
+    color: var(--p2-gold-300);
+    line-height: 1.45;
+    max-width: 720px;
+    margin-bottom: 40px;
+  }
+  .ovl .meta {
+    font-family: var(--font-sans-latin);
+    font-size: 16px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(250, 246, 236, 0.7);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .ovl .meta .dot { width:6px;height:6px;background:var(--p2-copper-500);border-radius:50%; }
+
+  .frame-corner {
+    position: absolute;
+    width: 96px; height: 96px;
+    border: 1px solid var(--p2-gold-500);
+  }
+  .frame-corner.tl { top: 64px; left: 64px; border-right:none; border-bottom:none; }
+  .frame-corner.br { bottom: 64px; right: 64px; border-left:none; border-top:none; }
+</style>
+</head>
+<body>
+<div class="slide-stage">
+  <div class="slide-scale" id="scale">
+    <section class="slide gallery" data-screen-label="07 Gallery">
+      <div class="bg-photo"></div>
+      <div class="frame-corner tl"></div>
+      <div class="frame-corner br"></div>
+      <div class="corner-mark on-dark">
+        <span class="p">P</span><span class="two">2</span>
+        <span class="wm">Boutique Hotel</span>
+      </div>
+      <div class="ovl">
+        <div class="eyebrow on-dark">A Warm Welcome</div>
+        <h1 class="h">每一处细节<br>都为您而准备</h1>
+        <p class="quote">"温馨的客房 · 亲切的服务 · 萌趣的小熊<br>让旅途的每一刻都成为美好回忆。"</p>
+        <div class="meta"><span>Twin Room</span><span class="dot"></span><span>Pratunam · Bangkok</span></div>
+      </div>
+      <div class="slide-footer on-dark">P2 Boutique Hotel · Pratunam</div>
+      <div class="page-number on-dark">07 / 09</div>
+    </section>
+  </div>
+</div>
+<script>
+  function fit(){
+    const s = document.getElementById('scale');
+    const k = Math.min(window.innerWidth/1920, window.innerHeight/1080);
+    const x = (window.innerWidth - 1920*k)/2;
+    const y = (window.innerHeight - 1080*k)/2;
+    s.style.transform = `translate(${x}px, ${y}px) scale(${k})`;
+  }
+  fit(); addEventListener('resize', fit);
+</script>
+</body>
+</html>

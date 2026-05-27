@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>P2 Boutique Hotel · Deck (Print)</title>
+<style>
+  @page {
+    size: 1920px 1080px;
+    margin: 0;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .page {
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+    break-after: page;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    background: #fff;
+  }
+  .page:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+  .page img {
+    width: 1920px;
+    height: 1080px;
+    display: block;
+    object-fit: cover;
+  }
+
+  /* On-screen preview — scaled stack so user can verify before printing */
+  @media screen {
+    body {
+      background: #0A1F1C;
+      padding: 24px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+    .page {
+      transform: scale(0.45);
+      transform-origin: top center;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+      margin-bottom: -595px; /* 1080 * (1 - 0.45) = 594 collapse */
+    }
+    .page:last-child { margin-bottom: 0; }
+  }
+
+  @media print {
+    body { background: #fff; }
+    .page {
+      transform: none !important;
+      margin: 0 !important;
+      box-shadow: none !important;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="page"><img src="print-assets/slide-01.png" alt="Slide 1 — Title"></div>
+  <div class="page"><img src="print-assets/slide-02.png" alt="Slide 2 — About"></div>
+  <div class="page"><img src="print-assets/slide-03.png" alt="Slide 3 — Superior Room"></div>
+  <div class="page"><img src="print-assets/slide-04.png" alt="Slide 4 — Facilities"></div>
+  <div class="page"><img src="print-assets/slide-05.png" alt="Slide 5 — Location"></div>
+  <div class="page"><img src="print-assets/slide-06.png" alt="Slide 6 — Why Choose Us"></div>
+  <div class="page"><img src="print-assets/slide-07.png" alt="Slide 7 — Gallery"></div>
+  <div class="page"><img src="print-assets/slide-08.png" alt="Slide 8 — Pricing"></div>
+  <div class="page"><img src="print-assets/slide-09.png" alt="Slide 9 — Contact"></div>
+
+<script>
+  // Wait for all images + fonts to load before triggering print.
+  (async function() {
+    const imgs = [...document.querySelectorAll('img')];
+    await Promise.all(imgs.map(img => {
+      if (img.complete && img.naturalWidth > 0) return Promise.resolve();
+      return new Promise(res => {
+        img.addEventListener('load', () => res(), { once: true });
+        img.addEventListener('error', () => res(), { once: true });
+      });
+    }));
+    if (document.fonts && document.fonts.ready) {
+      try { await document.fonts.ready; } catch (e) {}
+    }
+    await new Promise(r => setTimeout(r, 600));
+    window.print();
+  })();
+</script>
+</body>
+</html>

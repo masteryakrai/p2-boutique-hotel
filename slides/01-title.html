@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Title — P2 Boutique Hotel</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="slide-base.css">
+<style>
+  .slide.title {
+    background: var(--p2-cream);
+    display: grid;
+    grid-template-columns: 960px 1fr;
+    align-items: stretch;
+  }
+  /* Left column — text */
+  .title-text {
+    padding: 96px 64px 80px 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
+  }
+  .logo-stack {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+  }
+  .logo-stack .p2-mark {
+    font-family: var(--font-serif-display);
+    font-size: 180px;
+    color: var(--p2-green-900);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .logo-stack .p2-mark .two {
+    color: var(--p2-copper-500);
+    font-size: 108px;
+    margin-top: 22px;
+  }
+  .logo-stack .en-mark {
+    font-family: var(--font-sans-latin);
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: var(--p2-green-900);
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 4px;
+  }
+  .logo-stack .wm {
+    font-family: var(--font-serif-display);
+    font-style: italic;
+    color: var(--p2-gold-500);
+    font-size: 30px;
+    margin-top: 16px;
+    margin-left: 4px;
+  }
+
+  .title-block .zh-h1 {
+    font-family: var(--font-serif-sc);
+    font-weight: 500;
+    font-size: 88px;
+    line-height: 1.1;
+    color: var(--p2-green-900);
+    margin: 0 0 24px 0;
+    letter-spacing: -0.005em;
+  }
+  .title-block .zh-h1 b {
+    color: var(--p2-copper-500);
+    font-weight: 500;
+  }
+  .title-block .pillars {
+    font-family: var(--font-sans-sc);
+    font-size: 26px;
+    color: var(--p2-green-800);
+    letter-spacing: 0.04em;
+    margin-bottom: 20px;
+  }
+  .title-block .pillars span {
+    color: var(--p2-copper-500);
+    margin: 0 12px;
+    font-weight: 700;
+  }
+  .title-block .lead {
+    font-family: var(--font-sans-sc);
+    font-size: 16px;
+    color: var(--p2-sage-gray);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+  .title-foot {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    color: var(--p2-sage-gray);
+    font-family: var(--font-sans-latin);
+    font-size: 16px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+  .title-foot .dot { width:6px; height:6px; background: var(--p2-copper-500); border-radius:50%; }
+
+  /* Right column — photo */
+  .title-photo {
+    position: relative;
+    overflow: hidden;
+  }
+  .title-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  /* soft inner shadow on photo */
+  .title-photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(250, 246, 236, 0.18), transparent 22%);
+    pointer-events: none;
+  }
+  /* decorative leaf badge */
+  .leaf-mark {
+    position: absolute;
+    top: 96px;
+    right: 96px;
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    background: var(--p2-cream);
+    display: grid;
+    place-items: center;
+    color: var(--p2-green-900);
+    font-family: var(--font-serif-display);
+    font-style: italic;
+    box-shadow: 0 16px 40px rgba(15, 61, 56, 0.22);
+    z-index: 3;
+    text-align: center;
+  }
+  .leaf-mark .big { font-size: 22px; font-weight: 500; line-height: 1; }
+  .leaf-mark .small { font-family: var(--font-sans-latin); font-style: normal; font-size: 10px; letter-spacing: 0.22em; color: var(--p2-copper-500); margin-top: 8px; font-weight: 600; text-transform: uppercase; }
+  .leaf-mark .rule { width: 36px; height: 1px; background: var(--p2-copper-500); margin: 8px auto; }
+</style>
+</head>
+<body>
+<div class="slide-stage">
+  <div class="slide-scale" id="scale">
+    <section class="slide title" data-screen-label="01 Title">
+      <div class="title-text">
+        <div>
+          <div class="logo-stack">
+            <div class="p2-mark"><span>P</span><span class="two">2</span></div>
+            <div class="en-mark">Boutique&nbsp;&nbsp;Hotel</div>
+            <div class="wm">Pratunam · Bangkok</div>
+          </div>
+        </div>
+        <div class="title-block">
+          <h1 class="zh-h1">曼谷水门<br>精品<b>酒店</b></h1>
+          <div class="pillars">购物天堂<span>·</span>交通便利<span>·</span>温馨舒适</div>
+          <div class="lead">客房推介与周边导览 · Room &amp; Neighborhood Guide</div>
+        </div>
+        <div class="title-foot">
+          <span>Pratunam</span><span class="dot"></span>
+          <span>Ratchathewi</span><span class="dot"></span>
+          <span>Bangkok</span>
+        </div>
+      </div>
+      <div class="title-photo">
+        <img src="../assets/photos/entrance-01.jpg" alt="">
+        <div class="leaf-mark">
+          <div>
+            <div class="big">Welcome</div>
+            <div class="rule"></div>
+            <div class="small">Bangkok · Pratunam</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<script>
+  function fit(){
+    const s = document.getElementById('scale');
+    const k = Math.min(window.innerWidth/1920, window.innerHeight/1080);
+    const x = (window.innerWidth - 1920*k)/2;
+    const y = (window.innerHeight - 1080*k)/2;
+    s.style.transform = `translate(${x}px, ${y}px) scale(${k})`;
+  }
+  fit(); addEventListener('resize', fit);
+</script>
+</body>
+</html>

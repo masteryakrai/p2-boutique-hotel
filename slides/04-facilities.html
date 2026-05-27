@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Facilities — P2 Boutique Hotel</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="slide-base.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+  .slide.facility {
+    background: var(--p2-green-900);
+    padding: 156px 120px 120px;
+    color: var(--p2-cream);
+  }
+  .head { max-width: 1100px; margin-bottom: 80px; }
+  .head .eyebrow { margin-bottom: 26px; }
+  .head .h-section {
+    color: var(--p2-cream);
+    font-size: 80px;
+    margin-bottom: 18px;
+  }
+  .head p {
+    font-family: var(--font-sans-sc);
+    font-size: 22px;
+    color: rgba(250, 246, 236, 0.75);
+    line-height: 1.6;
+    max-width: 940px;
+  }
+
+  .facility-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 48px 56px;
+  }
+  .fc {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 22px;
+    align-items: center;
+  }
+  .fc .chip {
+    width: 72px; height: 72px;
+    border-radius: 50%;
+    background: rgba(250, 246, 236, 0.06);
+    border: 1px solid rgba(232, 168, 156, 0.3);
+    display: grid; place-items: center;
+    color: var(--p2-copper-300);
+  }
+  .fc .text .zh {
+    font-family: var(--font-sans-sc);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--p2-cream);
+    margin-bottom: 4px;
+  }
+  .fc .text .desc {
+    font-size: 15px;
+    color: rgba(250, 246, 236, 0.65);
+    line-height: 1.4;
+  }
+</style>
+</head>
+<body>
+<div class="slide-stage">
+  <div class="slide-scale" id="scale">
+    <section class="slide facility" data-screen-label="04 Facilities">
+      <div class="corner-mark on-dark">
+        <span class="p">P</span><span class="two">2</span>
+        <span class="wm">Boutique Hotel</span>
+      </div>
+      <div class="head">
+        <div class="eyebrow on-dark">Hotel Facilities</div>
+        <h2 class="h-section">贴心设施 · 舒适便利</h2>
+        <p>酒店提供多项设施与服务，让您的每一次入住都安心又惬意。</p>
+      </div>
+
+      <div class="facility-grid">
+        <div class="fc"><div class="chip"><i data-lucide="bell" style="width:34px;height:34px;stroke-width:1.5"></i></div><div class="text"><div class="zh">24 小时前台</div><div class="desc">全天候为您服务</div></div></div>
+        <div class="fc"><div class="chip"><i data-lucide="wifi" style="width:34px;height:34px;stroke-width:1.5"></i></div><div class="text"><div class="zh">免费无线网络</div><div class="desc">覆盖客房与公共区域</div></div></div>
+        <div class="fc"><div class="chip"><i data-lucide="arrow-up-down" style="width:34px;height:34px;stroke-width:1.5"></i></div><div class="text"><div class="zh">电梯</div><div class="desc">楼层往来轻松便捷</div></div></div>
+        <div class="fc"><div class="chip"><i data-lucide="square-parking" style="width:34px;height:34px;stroke-width:1.5"></i></div><div class="text"><div class="zh">私人停车场</div><div class="desc">为自驾旅客提供</div></div></div>
+
+        <div class="fc"><div class="chip"><i data-lucide="plug-zap" style="width:34px;height:34px;stroke-width:1.5"></i></div><div class="text"><div class="zh">电动车充电桩</div><div class="desc">绿色出行无忧</div></div></div>
+        <div class="fc"><div class="chip"><i data-lucide="map" style="width:34px;height:34px;stroke-width:1.5"></i></div><div class="text"><div class="zh">旅游咨询服务台</div><div class="desc">景点行程贴心安排</div></div></div>
+        <div class="fc"><div class="chip"><i data-lucide="coffee" style="width:34px;height:34px;stroke-width:1.5"></i></div><div class="text"><div class="zh">咖啡吧 & 酒吧</div><div class="desc">休闲小酌好去处</div></div></div>
+        <div class="fc"><div class="chip"><i data-lucide="hand" style="width:34px;height:34px;stroke-width:1.5"></i></div><div class="text"><div class="zh">按摩服务</div><div class="desc">旅途疲惫一扫而空</div></div></div>
+      </div>
+
+      <div class="slide-footer on-dark">P2 Boutique Hotel · Pratunam</div>
+      <div class="page-number on-dark">04 / 09</div>
+    </section>
+  </div>
+</div>
+<script>
+  function fit(){
+    const s = document.getElementById('scale');
+    const k = Math.min(window.innerWidth/1920, window.innerHeight/1080);
+    const x = (window.innerWidth - 1920*k)/2;
+    const y = (window.innerHeight - 1080*k)/2;
+    s.style.transform = `translate(${x}px, ${y}px) scale(${k})`;
+  }
+  fit(); addEventListener('resize', fit);
+  lucide.createIcons();
+</script>
+</body>
+</html>

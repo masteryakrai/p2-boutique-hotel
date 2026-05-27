@@ -1,0 +1,179 @@
+/* P2 — Shared slide base styles. 1920×1080 canvas. */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #1a1a1a; /* letterbox bg outside slide */
+  font-family: var(--font-sans-sc);
+  overflow: hidden;
+}
+
+.slide {
+  width: 1920px;
+  height: 1080px;
+  position: relative;
+  background: var(--p2-ivory);
+  overflow: hidden;
+  color: var(--fg-1);
+  /* Don't auto-scale here — each slide HTML loads in a frame that may scale it.
+     For the slides/index.html viewer we use CSS scale. */
+}
+
+/* slide outer wrapper that scales 1920×1080 → viewport */
+.slide-stage {
+  position: fixed;
+  inset: 0;
+  background: #0a0a0a;
+  overflow: hidden;
+}
+
+.slide-scale {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 1080px;
+  transform-origin: 0 0;
+}
+
+/* Common building blocks --------------------------------------------------- */
+.eyebrow {
+  font-family: var(--font-sans-latin);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--p2-copper-500);
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+}
+.eyebrow::before {
+  content: "";
+  width: 48px;
+  height: 1px;
+  background: var(--p2-copper-500);
+  display: inline-block;
+}
+.eyebrow.on-dark {
+  color: var(--p2-gold-500);
+}
+.eyebrow.on-dark::before {
+  background: var(--p2-gold-500);
+}
+
+.h-headline {
+  font-family: var(--font-serif-sc);
+  font-weight: 500;
+  font-size: 96px;
+  line-height: 1.12;
+  letter-spacing: -0.005em;
+  color: var(--p2-green-900);
+  margin: 0;
+}
+.h-headline.on-dark {
+  color: var(--p2-cream);
+}
+
+.h-section {
+  font-family: var(--font-serif-sc);
+  font-weight: 500;
+  font-size: 72px;
+  line-height: 1.15;
+  color: var(--p2-green-900);
+  margin: 0;
+}
+
+.h-card {
+  font-family: var(--font-sans-sc);
+  font-weight: 700;
+  font-size: 32px;
+  color: var(--p2-green-900);
+  margin: 0;
+}
+
+.body-lead {
+  font-family: var(--font-sans-sc);
+  font-size: 26px;
+  line-height: 1.6;
+  color: var(--p2-green-700);
+  font-weight: 400;
+}
+
+.body-text {
+  font-family: var(--font-sans-sc);
+  font-size: 22px;
+  line-height: 1.7;
+  color: var(--p2-green-700);
+}
+
+.caption {
+  font-family: var(--font-sans-sc);
+  font-size: 18px;
+  color: var(--p2-sage-gray);
+}
+
+/* Page corners — small logo wordmark in top-left of inner slides */
+.corner-mark {
+  position: absolute;
+  top: 56px;
+  left: 80px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  color: var(--p2-green-900);
+  z-index: 5;
+}
+.corner-mark .p {
+  font-family: var(--font-serif-display);
+  font-weight: 500;
+  font-size: 40px;
+  color: var(--p2-green-900);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.corner-mark .two {
+  font-family: var(--font-serif-display);
+  font-weight: 500;
+  font-size: 28px;
+  color: var(--p2-copper-500);
+  line-height: 1;
+}
+.corner-mark .wm {
+  font-family: var(--font-serif-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--p2-gold-500);
+  margin-left: 8px;
+}
+.corner-mark.on-dark .p { color: var(--p2-cream); }
+.corner-mark.on-dark .two { color: var(--p2-copper-500); }
+.corner-mark.on-dark .wm { color: var(--p2-gold-500); }
+
+.page-number {
+  position: absolute;
+  bottom: 56px;
+  right: 80px;
+  font-family: var(--font-sans-latin);
+  font-size: 14px;
+  letter-spacing: 0.22em;
+  color: var(--p2-sage-gray);
+}
+.page-number.on-dark {
+  color: rgba(250, 246, 236, 0.6);
+}
+
+.slide-footer {
+  position: absolute;
+  bottom: 56px;
+  left: 80px;
+  font-family: var(--font-sans-latin);
+  font-size: 14px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--p2-sage-gray);
+}
+.slide-footer.on-dark {
+  color: rgba(250, 246, 236, 0.6);
+}
